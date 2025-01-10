@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(18, 18, 18);
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            top: 30vh;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: "Raleway", sans-serif;
+    font-size: 5vmin;
+    font-weight: 400;
+    color: #F76D01;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .result p {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "Raleway", sans-serif;
+    font-size: 3vmin;
+    font-weight: 400;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Predictor Result</h1>
+        <div class="result">
+            <p>Here 1 signifies the person is diabetic and 0 signifies the person is non diabetic. Prediction:- {{ outcome }}</p>
+        </div>
+    </div>
+</body>
+</html>

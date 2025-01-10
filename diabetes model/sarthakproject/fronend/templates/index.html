@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/TextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <section>
+      <div>
+        <h1 id="text" class="text">Diabetes Predictor</h1>
+        <script>
+            const text = document.getElementById('text');
+          
+            gsap.to(text, {
+                x: 0,
+              duration: 3,
+              opacity: 1,
+        ease: "power2.out"
+            });
+          </script>
+        <p id="para" class="para">Enter the value of Pregnancies in the range of (0 to 10)<br><br>
+            Enter the value of Glucose in the range of (0 to 300)<br><br>
+        Enter the value of Blood Pressure in the range of (0 to 150)<br><br>
+    Enter the value of Skin Thickness in the range of (0 to 4) 4mm<br><br>
+    Enter the value of Insulin in the range of (0 to 30)<br><br>
+    Enter the value of BMI in the range of (0 to 50)<br><br>
+    Enter the value of Diabetes Pedigree Function in the range of(0 to 200)<br><br>
+    Enter the age of the patient in the range of (0 to 100)<br><br>
+    </p>
+    <script>
+        const para = document.getElementById('para');
+      
+        gsap.to(para, {
+            y: 0,
+          duration: 3,
+          opacity: 1,
+    ease: "power2.out"
+        });
+      </script>
+      </div>
+        <form action="/result" method="post" id="form" class="form">
+            <input type="number" id="pregnancies" name="pregnancies" placeholder="Pregnancies" required><br>
+            
+            <input type="number" id="glucose" name="glucose" placeholder="Glucose" required><br>
+            
+            <input type="number" id="blood_pressure" name="blood_pressure" placeholder="Blood Pressure" required><br>
+            
+            <input type="number" id="skin_thickness" name="skin_thickness" placeholder="Skin Thickness" required><br>
+            
+            <input type="number" id="insulin" name="insulin" placeholder="Insulin" required><br>
+            
+            <input type="number" id="bmi" name="bmi" step="0.01" placeholder="BMI" required><br>
+            
+            <input type="number" id="diabetes_pedigree_function" name="diabetes_pedigree_function" step="0.01" placeholder="Diabetes Pedigree Function" required><br>
+            
+            <input type="number" id="age" name="age" placeholder="Age" required><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            const form = document.getElementById('form');
+          
+            gsap.to(form, {
+                x: 0,
+              duration: 3,
+              opacity: 1,
+        ease: "power2.out"
+            });
+          </script>
+    </section>
+</body>
+</html>
